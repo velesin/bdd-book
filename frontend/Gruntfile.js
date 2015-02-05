@@ -28,14 +28,14 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= config.app %>/scripts/**/*.js'],
+        files: ['<%= config.app %>/**/*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
       },
       jsTest: {
-        files: ['test/spec/**/*.js'],
+        files: ['**/*.spec.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
       compass: {
@@ -110,14 +110,14 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= config.app %>/scripts/**/*.js'
+          '<%= config.app %>/**/*.js'
         ]
       },
       test: {
         options: {
           jshintrc: 'test/.jshintrc'
         },
-        src: ['test/spec/**/*.js']
+        src: ['**/*.spec.js']
       }
     },
 
@@ -166,7 +166,7 @@ module.exports = function (grunt) {
         cssDir: '.tmp/styles',
         generatedImagesDir: '.tmp/images/generated',
         imagesDir: '<%= config.app %>/images',
-        javascriptsDir: '<%= config.app %>/scripts',
+        javascriptsDir: '<%= config.app %>',
         fontsDir: '<%= config.app %>/styles/fonts',
         importPath: './bower_components',
         httpImagesPath: '/images',

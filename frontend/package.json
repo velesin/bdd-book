@@ -1,5 +1,5 @@
 {
-  "name": "Test Driven Apps Frontend",
+  "name": "TestDrivenApps",
   "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
@@ -22,7 +22,10 @@
     "grunt-karma": "~0.9.0",
     "karma-phantomjs-launcher": "~0.1.4",
     "karma": "~0.12.24",
-    "karma-jasmine": "~0.2.3"
+    "karma-jasmine": "~0.2.3",
+    "karma-jasmine-cucumber": "~1.0.1",
+    "protractor": "~1.6.1",
+    "protractor-jasmine-cucumber": "~0.1.1"
   },
   "engines": {
     "node": ">=0.10.0"

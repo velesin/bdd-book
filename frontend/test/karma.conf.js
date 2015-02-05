@@ -4,28 +4,22 @@ module.exports = function(config) {
   config.set({
     autoWatch: true,
     basePath: '../',
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'karma-jasmine-cucumber'],
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-animate/angular-animate.js',
-      'bower_components/angular-cookies/angular-cookies.js',
-      'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-route/angular-route.js',
-      'bower_components/angular-sanitize/angular-sanitize.js',
-      'bower_components/angular-touch/angular-touch.js',
-      'app/scripts/**/*.js',
-      'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'app/**/*.js',
+      'test/unit/**/*.js'
     ],
-    exclude: [],
     port: 8080,
     browsers: [
       'PhantomJS'
     ],
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-jasmine-cucumber'
     ],
     singleRun: false,
     colors: true,
