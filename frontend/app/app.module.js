@@ -1,6 +1,8 @@
-'use strict';
+(function() {
+  'use strict';
 
-angular
-    .module('spaceShipApp', [
-      'ngRoute'
-    ]);
+  angular
+      .module('spaceShipApp', [
+        'ngRoute'
+      ]);
+})();
