@@ -191,7 +191,13 @@ module.exports = function (grunt) {
 
 
     concat: {
-       dist: {}
+      options: {
+        separator: ';',
+      },
+      dist: {
+        src: ['bower_components/angular/angular.js', 'bower_components/angular-route/angular-route.js'],
+        dest: 'dist/bower-components.js',
+      },
     },
 
     ngAnnotate: {
@@ -278,6 +284,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
+      'concat',
       'connect:livereload',
       'watch'
     ]);
