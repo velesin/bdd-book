@@ -8,7 +8,7 @@
   function config($routeProvider) {
     $routeProvider
         .when('/', {
-          templateUrl: 'layout/dashboard.html',
+          templateUrl: 'dashboard/dashboard.html',
           controller: 'Dashboard',
           controllerAs: 'vm'
         });
